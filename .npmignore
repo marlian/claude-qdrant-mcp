@@ -1,0 +1,27 @@
+# Source
+src/
+
+# TypeScript config
+tsconfig.json
+
+# Development configs
+.gitignore
+.git
+
+# Editor directories
+.idea
+.vscode
+
+# Logs
+*.log
+
+# Environment variables
+.env*
+
+# Dependencies
+node_modules/
+
+# Test files
+test/
+*.test.ts
+*.spec.ts

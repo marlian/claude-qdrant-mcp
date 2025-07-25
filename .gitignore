@@ -1,0 +1,80 @@
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+.env.production
+.env.development
+
+# Build output
+dist/
+build/
+*.tsbuildinfo
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+debug.log
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Testing
+coverage/
+.nyc_output/
+
+# Qdrant data (if running locally)
+qdrant-data/
+*.qdrant
+.qdrant/
+
+# Document processing
+memory.json
+processed-docs/
+temp-docs/
+
+# Legacy database files (from migration)
+lance-db-*/
+*.lance
+*.db
+*.sqlite*
+
+# Backup files
+*.backup
+*.bak
+
+# OS
+*.tmp
+.tmp/
+.temp/
+
+# MCP specific
+claude_desktop_config.json
+lm_studio_mcp.json
+
+# Claude wrapper (personal use only)
+claude-wrapper.ts
+
+# Sync scripts with personal paths (keep local)
+sync-rag-personal.sh
+
+# Large file artifacts
+embeddings-cache/
+*.embeddings

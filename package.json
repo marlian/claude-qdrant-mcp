@@ -1,0 +1,48 @@
+{
+  "name": "qdrant-mcp-hybrid",
+  "version": "1.0.0",
+  "description": "The most advanced TypeScript MCP server for Qdrant with multi-client isolation, LM Studio integration, and enterprise-grade document processing.",
+  "license": "MIT",
+  "author": "Zeno Sartori",
+  "homepage": "https://github.com/marlian/qdrant-mcp-hybrid",
+  "bugs": "https://github.com/marlian/qdrant-mcp-hybrid/issues",
+  "type": "module",
+  "bin": {
+    "qdrant-mcp-hybrid": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc && shx chmod +x dist/*.js",
+    "prepare": "npm run build",
+    "watch": "tsc --watch",
+    "seed": "tsx src/seed.ts"
+  },
+  "dependencies": {
+    "@langchain/community": "^0.3.49",
+    "@langchain/core": "^0.3.66",
+    "@langchain/textsplitters": "^0.1.0",
+    "@modelcontextprotocol/sdk": "^1.16.0",
+    "@qdrant/js-client-rest": "^1.15.0",
+    "axios": "^1.8.1",
+    "dotenv": "^16.6.1",
+    "langchain": "^0.3.30",
+    "mammoth": "^1.9.1",
+    "minimist": "^1.2.8",
+    "openai": "^4.24.1",
+    "p-limit": "^6.2.0",
+    "pdf-parse": "^1.1.1"
+  },
+  "devDependencies": {
+    "@types/dotenv": "^8.2.0",
+    "@types/minimist": "^1.2.5",
+    "@types/node": "^20.19.9",
+    "shx": "^0.3.4",
+    "tsx": "^4.20.3",
+    "typescript": "^5.6.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
