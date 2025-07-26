@@ -1,3 +1,7 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Built With TypeScript](https://img.shields.io/badge/Built%20With-TypeScript-3178c6.svg)](https://www.typescriptlang.org/)
+[![Powered by Qdrant](https://img.shields.io/badge/Vector%20Search-Qdrant-6f42c1.svg)](https://qdrant.tech/)
+
 # 🚀 Qdrant MCP Hybrid - Ultimate RAG System
 
 > **The most advanced TypeScript MCP server for Qdrant with multi-client isolation, LM Studio integration, and enterprise-grade document processing**
@@ -35,6 +39,26 @@ This is the **ultimate evolution** of RAG (Retrieval-Augmented Generation) syste
 - **Granular chunk search** - search within specific documents  
 - **Cross-client search** - find information across all clients
 - **Rich metadata** - source tracking, chunk indexing, similarity scores
+
+## 📑 Table of Contents
+
+- [🌟 What is This?](#-what-is-this)
+- [⚡ Key Features](#-key-features)
+- [🛠️ Installation & Setup](#️-installation--setup)
+- [🚀 LM Studio Setup](#-lm-studio-setup)
+- [📊 Usage Examples](#-usage-examples)
+- [🏗️ Architecture Deep Dive](#️-architecture-deep-dive)
+- [🎯 Performance & Scalability](#-performance--scalability)
+- [🔍 Troubleshooting](#-troubleshooting)
+- [🚀 Development](#-development)
+- [📈 Migration from Other Systems](#-migration-from-other-systems)
+- [🔐 Privacy & Security](#-privacy--security)
+- [🛣️ Roadmap](#-roadmap)
+- [📚 Documentation](#-Extended-Documentation)
+- [🤝 Contributing](#-contributing)
+- [📄 License](#-license)
+- [🙏 Acknowledgments](#-acknowledgments)
+- [📞 Support](#-support)
 
 ## 🛠️ Installation & Setup
 
@@ -373,13 +397,16 @@ npm run seed -- --validate-only --client test --filesdir ./test-docs
 - **Batch processing** for large document sets
 - **Real-time file watching** for automatic updates
 
-## 📚 Documentation
+## 📚 Extended Documentation
 
-### Quick Start
-- **[README.md](README.md)** - Main documentation and setup guide
-- **[MCP Tools Reference](docs/MCP-Tools-Reference.md)** - Complete tool specifications and examples
-- **[Advanced Configuration](docs/Advanced-Configuration.md)** - Power user setup and customization
+Looking for deeper details, integrations or low-level references?  
+Check out the full documentation under [`/docs`](./docs):
 
+- [🧠 Claude Project Instructions](./docs/Claude-Project-Instructions.md) — AI agent behavior and search workflows
+- [🖥️ Claude Desktop Integration](./docs/Claude-Desktop-Integration.md) — Setup guide for local LM Studio
+- [⚙️ Advanced Configuration](./docs/Advanced-Configuration.md) — Power user setup and tuning
+- [🛠 MCP Tools Reference](./docs/MCP-Tools-Reference.md) — Tool descriptions, parameters, and examples
+  
 ### Key Resources
 - **Setup guides** for LM Studio, Qdrant, and Claude Desktop integration
 - **Performance benchmarks** and optimization tips
