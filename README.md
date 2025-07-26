@@ -1,6 +1,8 @@
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Built With TypeScript](https://img.shields.io/badge/Built%20With-TypeScript-3178c6.svg)](https://www.typescriptlang.org/)
-[![Powered by Qdrant](https://img.shields.io/badge/Vector%20Search-Qdrant-6f42c1.svg)](https://qdrant.tech/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE)
+[![TypeScript](https://img.shields.io/badge/Built%20with-TypeScript-3178c6.svg)](https://www.typescriptlang.org/)
+[![Qdrant](https://img.shields.io/badge/Vector%20Search-Qdrant-6f42c1.svg)](https://qdrant.tech/)
+[![Local-First](https://img.shields.io/badge/Privacy-Local--First-blueviolet.svg)](#)
+[![LM Studio](https://img.shields.io/badge/LLM-LM%20Studio-ff69b4.svg)](https://lmstudio.ai/)
 
 # 🚀 Qdrant MCP Hybrid - Ultimate RAG System
 
