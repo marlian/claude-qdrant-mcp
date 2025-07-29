@@ -1,4 +1,4 @@
-# Simple single-stage build for Smithery compatibility
+# Smithery-compatible single-stage build
 FROM node:18-alpine
 
 WORKDIR /app
@@ -6,8 +6,8 @@ WORKDIR /app
 # Copy package files first for better caching
 COPY package*.json ./
 
-# Install all dependencies (including dev for build)
-RUN npm ci
+# Install all dependencies (dev needed for build)
+RUN npm install
 
 # Copy source code
 COPY . .
