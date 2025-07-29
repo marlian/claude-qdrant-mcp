@@ -1,23 +1,32 @@
 {
-  "name": "qdrant-mcp-hybrid",
+  "name": "claude-qdrant-mcp",
   "version": "1.0.0",
   "description": "The most advanced TypeScript MCP server for Qdrant with multi-client isolation, LM Studio integration, and enterprise-grade document processing.",
   "license": "MIT",
   "author": "Zeno Sartori",
-  "homepage": "https://github.com/marlian/qdrant-mcp-hybrid",
-  "bugs": "https://github.com/marlian/qdrant-mcp-hybrid/issues",
+  "homepage": "https://github.com/marlian/claude-qdrant-mcp",
+  "bugs": "https://github.com/marlian/claude-qdrant-mcp/issues",
   "type": "module",
+  "main": "dist/index.js",
   "bin": {
-    "qdrant-mcp-hybrid": "dist/index.js"
+    "claude-qdrant-mcp": "dist/index.js",
+    "qdrant-setup": "scripts/setup.js"
   },
   "files": [
-    "dist"
+    "dist",
+    "scripts",
+    ".env.example",
+    "README.md"
   ],
   "scripts": {
-    "build": "tsc && shx chmod +x dist/*.js",
+    "build": "tsc && shx chmod +x dist/*.js && shx chmod +x scripts/*.js",
     "prepare": "npm run build",
+    "postinstall": "node scripts/postinstall.js",
+    "setup": "node scripts/setup.js",
     "watch": "tsc --watch",
-    "seed": "tsx src/seed.ts"
+    "seed": "tsx src/seed.ts",
+    "start": "node dist/index.js",
+    "test-connection": "node scripts/test-connection.js"
   },
   "dependencies": {
     "@langchain/community": "^0.3.49",
@@ -32,17 +41,35 @@
     "minimist": "^1.2.8",
     "openai": "^4.24.1",
     "p-limit": "^6.2.0",
-    "pdf-parse": "^1.1.1"
+    "pdf-parse": "^1.1.1",
+    "chalk": "^5.3.0",
+    "inquirer": "^12.1.0",
+    "fs-extra": "^11.2.0"
   },
   "devDependencies": {
     "@types/dotenv": "^8.2.0",
     "@types/minimist": "^1.2.5",
     "@types/node": "^20.19.9",
+    "@types/inquirer": "^9.0.7",
+    "@types/fs-extra": "^11.0.4",
     "shx": "^0.3.4",
     "tsx": "^4.20.3",
     "typescript": "^5.6.2"
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "keywords": [
+    "qdrant",
+    "mcp",
+    "rag",
+    "retrieval-augmented-generation",
+    "typescript",
+    "claude",
+    "semantic-search",
+    "vector-database",
+    "lm-studio",
+    "ai",
+    "embeddings"
+  ]
 }

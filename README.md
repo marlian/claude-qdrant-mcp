@@ -42,11 +42,80 @@ This is the **ultimate evolution** of RAG (Retrieval-Augmented Generation) syste
 - **Cross-client search** - find information across all clients
 - **Rich metadata** - source tracking, chunk indexing, similarity scores
 
-## 📑 Table of Contents
+## 🚀 Quick Install via NPM
+
+### Global Installation (Recommended)
+
+```bash
+# Install globally for easy project setup
+npm install -g claude-qdrant-mcp
+
+# Create new project
+mkdir my-rag-project
+cd my-rag-project
+qdrant-setup
+
+# Or use the interactive setup
+npm run setup
+```
+
+### Local Project Installation
+
+```bash
+# Install in existing project
+npm install claude-qdrant-mcp
+
+# Run interactive setup
+npx qdrant-setup
+```
+
+### What the Auto-Setup Does
+
+✅ **Dependency Check** - Verifies Node.js, Qdrant, and LM Studio  
+✅ **Environment Config** - Interactive `.env` file creation  
+✅ **Claude Desktop Integration** - Automatic MCP server configuration  
+✅ **Sample Documents** - Creates test files for immediate use  
+✅ **Connection Testing** - Validates all services are working  
+
+### One-Command Install & Test
+
+```bash
+# Complete setup and test in one go
+npm install -g claude-qdrant-mcp && \
+mkdir my-rag && cd my-rag && \
+qdrant-setup && \
+npm run test-connection
+```
+
+### Available Commands
+
+After installation, you have access to:
+
+```bash
+# Interactive setup wizard
+qdrant-setup
+
+# Test all connections
+npm run test-connection
+
+# Seed documents
+npm run seed -- --client work --filesdir ./documents
+
+# Start MCP server
+npm start
+
+# Development mode
+npm run watch
+```
+
+---
+
+## � Table of Contents
 
 - [🌟 What is This?](#-what-is-this)
 - [⚡ Key Features](#-key-features)
-- [🛠️ Installation & Setup](#️-installation--setup)
+- [🚀 Quick Install via NPM](#-quick-install-via-npm)
+- [🛠️ Manual Installation & Setup](#️-manual-installation--setup)
 - [🚀 LM Studio Setup](#-lm-studio-setup)
 - [📊 Usage Examples](#-usage-examples)
 - [🏗️ Architecture Deep Dive](#️-architecture-deep-dive)
@@ -62,7 +131,7 @@ This is the **ultimate evolution** of RAG (Retrieval-Augmented Generation) syste
 - [🙏 Acknowledgments](#-acknowledgments)
 - [📞 Support](#-support)
 
-## 🛠️ Installation & Setup
+## 🛠️ Manual Installation & Setup
 
 ### Prerequisites
 - **Node.js 18+**
@@ -73,8 +142,8 @@ This is the **ultimate evolution** of RAG (Retrieval-Augmented Generation) syste
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/qdrant-mcp-hybrid.git
-cd qdrant-mcp-hybrid
+git clone https://github.com/marlian/claude-qdrant-mcp.git
+cd claude-qdrant-mcp
 
 # Install dependencies
 npm install
@@ -174,7 +243,7 @@ Add to your `claude_desktop_config.json`:
   "mcpServers": {
     "qdrant-rag": {
       "command": "node",
-      "args": ["/absolute/path/to/qdrant-mcp-hybrid/dist/index.js"],
+      "args": ["/absolute/path/to/claude-qdrant-mcp/dist/index.js"],
       "env": {
         "QDRANT_URL": "http://localhost:6333",
         "QDRANT_API_KEY": "your-api-key-if-needed",
@@ -451,8 +520,8 @@ Built upon the excellent work of:
 
 ## 📞 Support
 
-- **[GitHub Issues](https://github.com/marlian/qdrant-mcp-hybrid/issues)** - Bug reports and feature requests
-- **[GitHub Discussions](https://github.com/marlian/qdrant-mcp-hybrid/discussions)** - Questions and community support
+- **[GitHub Issues](https://github.com/marlian/claude-qdrant-mcp/issues)** - Bug reports and feature requests
+- **[GitHub Discussions](https://github.com/marlian/claude-qdrant-mcp/discussions)** - Questions and community support
 - **[Documentation](docs/)** - Comprehensive guides and references
 
 For detailed API documentation, see [MCP Tools Reference](docs/MCP-Tools-Reference.md).
