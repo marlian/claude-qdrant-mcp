@@ -19,7 +19,7 @@
     "README.md"
   ],
   "scripts": {
-    "build": "tsc && shx chmod +x dist/*.js && shx chmod +x scripts/*.js",
+    "build": "tsc && shx chmod +x dist/*.js",
     "prepare": "npm run build",
     "postinstall": "node scripts/postinstall.js",
     "setup": "node scripts/setup.js",
