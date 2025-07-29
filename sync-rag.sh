@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Qdrant RAG Database Sync Script  
-# Author: Zeno Sartori
+# Author: Marlian
 # Description: Sincronizza tutti i client RAG con Qdrant
 
 # === LOGGING SETUP ===

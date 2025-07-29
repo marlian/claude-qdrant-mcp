@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "The most advanced TypeScript MCP server for Qdrant with multi-client isolation, LM Studio integration, and enterprise-grade document processing.",
   "license": "MIT",
-  "author": "Zeno Sartori",
+  "author": "Marlian",
   "homepage": "https://github.com/marlian/claude-qdrant-mcp",
   "bugs": "https://github.com/marlian/claude-qdrant-mcp/issues",
   "type": "module",
