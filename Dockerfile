@@ -1,6 +1,6 @@
 # Smithery-compatible multi-stage build
 # Build stage - compile TypeScript with all dependencies
-FROM node:18-alpine AS builder
+FROM node:20-alpine AS builder
 
 WORKDIR /app
 
@@ -15,13 +15,15 @@ COPY . .
 RUN npm run build
 
 # Production stage - lean runtime image
-FROM node:18-alpine AS production
+FROM node:20-alpine AS production
 
 WORKDIR /app
 
-# Copy package files and install only production dependencies
+# Copy package files
 COPY package*.json ./
-RUN npm ci --only=production && npm cache clean --force
+
+# Install only production dependencies, skip scripts (postinstall is just informational)
+RUN npm ci --omit=dev --ignore-scripts && npm cache clean --force
 
 # Copy compiled application from build stage
 COPY --from=builder /app/dist ./dist
