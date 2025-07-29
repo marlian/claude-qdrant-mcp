@@ -3,6 +3,7 @@
 [![Qdrant](https://img.shields.io/badge/Vector%20Search-Qdrant-6f42c1.svg)](https://qdrant.tech/)
 [![Local-First](https://img.shields.io/badge/Privacy-Local--First-blueviolet.svg)](#)
 [![LM Studio](https://img.shields.io/badge/LLM-LM%20Studio-ff69b4.svg)](https://lmstudio.ai/)
+[![smithery badge](https://smithery.ai/badge/@marlian/claude-qdrant-mcp)](https://smithery.ai/server/@marlian/claude-qdrant-mcp)
 
 # 🚀 Qdrant MCP Hybrid - Ultimate RAG System
 
