@@ -1,29 +1,36 @@
-# Smithery-compatible single-stage build
-FROM node:18-alpine
+# Smithery-compatible multi-stage build
+# Build stage - compile TypeScript with all dependencies
+FROM node:18-alpine AS builder
 
 WORKDIR /app
 
-# Copy package files first for better caching
-COPY package*.json ./
+# Copy package files for dependency installation
+COPY package*.json tsconfig.json ./
 
-# Install all dependencies (dev needed for build)
-RUN npm install
+# Install all dependencies (including dev dependencies for build)
+RUN npm install && npm cache clean --force
 
-# Copy source code
+# Copy source code and build
 COPY . .
-
-# Build the project
 RUN npm run build
 
-# Clean up dev dependencies to reduce image size
+# Production stage - lean runtime image
+FROM node:18-alpine AS production
+
+WORKDIR /app
+
+# Copy package files and install only production dependencies
+COPY package*.json ./
 RUN npm ci --only=production && npm cache clean --force
+
+# Copy compiled application from build stage
+COPY --from=builder /app/dist ./dist
 
 # Create non-root user for security
 RUN addgroup -g 1001 -S nodejs && \
-    adduser -S mcpuser -u 1001
+    adduser -S mcpuser -u 1001 && \
+    chown -R mcpuser:nodejs /app
 
-# Change ownership and switch to non-root user
-RUN chown -R mcpuser:nodejs /app
 USER mcpuser
 
 # Health check
